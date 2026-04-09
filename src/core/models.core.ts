@@ -5,3 +5,4 @@ export * from "../modules/public/category/models.category";
 export * from "../modules/public/news/models.news";
 export * from "../modules/public/gallery/models.gallery";
 export * from "../modules/public/subscriber/models.subscriber";
+export * from "../modules/core/permission/controllers.permission";

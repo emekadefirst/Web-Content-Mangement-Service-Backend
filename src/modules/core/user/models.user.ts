@@ -1,5 +1,5 @@
 import { pgTable, pgEnum, uuid, varchar, timestamp, jsonb, boolean, index } from "drizzle-orm/pg-core";
-
+import { PermissionGroup } from "../permission/models.permission";
 export const userRole = pgEnum("user_role", ["user", "admin", "moderator"]);
 
 export const User = pgTable("users", {
@@ -9,6 +9,7 @@ export const User = pgTable("users", {
     lastName: varchar("last_name", { length: 255 }).notNull(),
     phoneNumber: varchar("last_name", { length: 255 }).unique(),
     role: userRole("role").notNull().default("user"),
+    permissionGroupId: uuid("permission_group_id").references(() => PermissionGroup.id),
     password: varchar("password", { length: 128 }).notNull(),
     isActive: boolean("is_active").default(true),
     isVerified: boolean("is_verified").default(false),

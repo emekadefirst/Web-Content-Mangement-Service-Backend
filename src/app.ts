@@ -15,7 +15,8 @@ import galleryController from './modules/public/gallery/controller.gallery';
 import subscriberController from './modules/public/subscriber/controller.subscriber';
 import contactRouter from './modules/public/contact/controllers.contact';
 // Notification
-import bootstrap from './notification';
+
+import permissionController from './modules/core/permission/controllers.permission';
 
 // await bootstrap();
 
@@ -71,6 +72,8 @@ app.route('/v1/categories', categoryController);
 app.route('/v1/faqs', faqController);
 app.route('/v1/galleries', galleryController);
 app.route('/v1/subscribers', subscriberController);
+app.route("/v1/permissions/", permissionController);
+
 
 
 app.get('/docs', swaggerUI({ url: '/doc' }));
