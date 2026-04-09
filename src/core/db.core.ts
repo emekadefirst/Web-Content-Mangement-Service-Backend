@@ -1,6 +1,6 @@
 import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
-import { DBURL } from "../configs/env,configs";
+import { DBURL } from "../configs/env.configs";
 import * as schema from "./models.core";
 
 

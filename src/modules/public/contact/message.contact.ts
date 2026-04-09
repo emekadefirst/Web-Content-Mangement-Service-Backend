@@ -1,5 +1,5 @@
 import amqplib from 'amqplib';
-import { RABBITMQ_URL } from "../../../configs/env,configs";
+import { RABBITMQ_URL } from "../../../configs/env.configs";
 import { EmailSchema } from '../../../notification/core/mail/schemas.mail';
 import { z } from '@hono/zod-openapi';
 
